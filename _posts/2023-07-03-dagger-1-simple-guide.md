@@ -17,34 +17,30 @@ dagger是有Square公司开源的一个Java和Android的依赖注入框架
 dagger认为最好的类是那些做实事的类，像`BarcodeDecoder`,`AudioStreamer`，而像
 `BarcodeDecoderFactory`，`MutableContextWrapper`这些类是最没有用的类，却占用了大量空间， dagger可以替代掉一些工厂类，让你专注于实用类的编写，只需要声明类之间的依赖关系即可
 
-dagger实现了`JSR-330`的依赖注入标准
-
-[dagger1](https://github.com/square/dagger)目前已经停止维护，[dagger2](https://github.com/google/dagger)由google接手维护了
-
-由于dagger1已经废弃了，所以这里只做一个简单介绍，不过多深入分析
+dagger实现了`JSR-330`的依赖注入标准   
+[dagger1](https://github.com/square/dagger)目前已经停止维护，[dagger2](https://github.com/google/dagger)由google接手维护了   
+由于dagger1已经废弃了，所以这里只做一个简单介绍，不过多深入分析   
 
 ## 使用dagger1
 
-我们以一个打印机服务的例子来演示一下dagger依赖注入
-
+我们以一个打印机服务的例子来演示一下dagger依赖注入  
 假设我们要开发一个打印服务
 
 #### 注入依赖
 
 ```java
 public class PrintApp {
-    private final Printer printer;				// 打印机
-    private final PrintDriver printDriver;		// 打印机驱动
+    private final Printer printer;              // 打印机
+    private final PrintDriver printDriver;      // 打印机驱动
     
-    @Inject	  // 注入依赖
+    @Inject   // 注入依赖
     PrintApp(PrintDriver printDriver, Printer printer) {
         this.printDriver = printDriver;
         this.printer = printer;
     }
 }
 ```
-打印程序依赖`Printer`和`PrintDriver`
-
+打印程序依赖`Printer`和`PrintDriver`   
 ```java
 public interface Printer {
     /**
@@ -53,7 +49,7 @@ public interface Printer {
     void print(Connection connect);
 }
 ```
-和
+和   
 ```java
 public interface PrintDriver {
     /**
@@ -63,28 +59,24 @@ public interface PrintDriver {
 
 }
 ```
-
-我们使用`@Inject`注解来通过构造器注入依赖
-
+我们使用`@Inject`注解来通过构造器注入依赖      
 我们也可以通过字段注入
 ```java
 public class PrintApp {
- 	@Inject
+    @Inject
     Printer printer;
 
     @Inject
     PrintDriver printDriver;
 }
 ```
-注意字段不能是private
+注意字段不能是private   
 但是dagger不支持方法注入
 
-`@Inject`有几个限制
-
+`@Inject`有几个限制   
 - 无法构造接口类
 - 无法注解第三方类
-- 可配置对象必须配置 
-
+- 可配置对象必须配置   
 如果配置类没有满足依赖，将无法通过编译
 
 #### 提供依赖
@@ -109,11 +101,9 @@ public class PrintModule {
 }
 ```
 
-我们新建一个打印模块`PrintModule`， 注解`@Module`用于申明该是一个dagger依赖模块
-
-为了让dagger知道我们的模块要注入到那个依赖中，需要声明`injects`的属性，这个会在编译期验证
-
-我们在里面提供可选的依赖，例如在<2>中 我们提供了打印机的实现(`ZebraPrinter`)
+我们新建一个打印模块`PrintModule`， 注解`@Module`用于声明该是一个dagger依赖模块   
+为了让dagger知道我们的模块要注入到那个依赖中，需要声明`injects`的属性，这个会在编译期验证   
+我们在里面提供可选的依赖，例如在<2>中 我们提供了打印机的实现(`ZebraPrinter`)   
 
 ```java
 public class ZebraPrinter implements Printer {
@@ -192,12 +182,10 @@ public class PrintApp {
 开始打印
 ```
 
-
-
 ## 结语
 
-dagger1还支持懒加载，但是由于是过时的技术，这里只做简单的样式
+dagger1还支持懒加载，但是由于是过时的技术，这里只做简单的演示
 
-演示代码上传至github仓库[daggert1-learn](https://github.com/qaqRose/daggert1-learn)
+演示代码上传至github仓库[dagger1-learn](https://github.com/qaqRose/dagger1-learn)
 
 
