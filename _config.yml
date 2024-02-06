@@ -3,7 +3,8 @@
 #################################################################
 
 # Site
-title: qaqRose专栏
+title: qaqRose博客
+author: qaqRose
 description: NexT
 keywords: "Hexo, NexT"
 language: zh-CN
@@ -82,5 +83,8 @@ search:
   path: search.json
   field: all
 
-
+# tag
+tag_generator:
+  per_page: 10
+  order_by: -date
 

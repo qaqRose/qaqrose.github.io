@@ -41,61 +41,10 @@ creative_commons:
 
 menu:
   home: / || fa fa-bell
-
-  Docs:
-    default: /docs/ || fa fa-book
-
-    Getting Started:
-      default: /getting-started/ || fa fa-flag
-      Installation: /installation.html || fa fa-download
-      Deployment: /deployment.html || fa fa-upload
-      Configuration: /configuration.html || fa fa-wrench
-      Upgrade: /upgrade.html || fa fa-history
-
-    Theme Settings:
-      default: /theme-settings/ || fa fa-star
-      Sidebar: /sidebar.html || fa fa-bars
-      Footer: /footer.html || fa fa-sticky-note
-      Posts: /posts.html || fa fa-paragraph
-      Custom Pages: /custom-pages.html || fa fa-swatchbook
-      Miscellaneous: /miscellaneous.html || fa fa-university
-      SEO: /seo.html || fa fa-external-link-square-alt
-      i18n: /internationalization.html || fa fa-language
-
-    Tag Plugins:
-      default: /tag-plugins/ || fa fa-rocket
-      Button: /button.html || fa fa-cube
-      Caniuse: /caniuse.html || fa fa-signal
-      Group Pictures: /group-pictures.html || fa fa-images
-      Label: /label.html || fa fa-hat-wizard
-      Link Grid: /link-grid.html || fa fa-grip-vertical
-      Mermaid: /mermaid.html || fa fa-project-diagram
-      WaveDrom: /wavedrom.html || fa fa-diagram-predecessor
-      Note: /note.html || fa fa-adjust
-      PDF: /pdf.html || fa fa-file-pdf
-      Tabs: /tabs.html || fa fa-columns
-
-    Third Party Plugins:
-      default: /third-party-services/ || fa fa-puzzle-piece
-      Math Equations: /math-equations.html || fa fa-square-root-alt
-      External Libraries: /external-libraries.html || fa fa-lightbulb
-      Comment Systems: /comments.html || fa fa-comment-alt
-      Post Widgets: /post-widgets.html || fa fa-gift
-      Statistics and Analytics: /statistics-and-analytics.html || fa fa-chart-pie
-      Search Services: /search-services.html || fab fa-algolia
-      Chat Services: /chat-services.html || fa fa-comments
-
-    Advanced Settings:
-      default: /advanced-settings/ || fa fa-cog
-      Vendors: /vendors.html || fa fa-plug
-      Custom Files: /custom-files.html || fa fa-palette
-      Injects: injects.html || fa fa-layer-group
-      Front Matter: /front-matter.html || fa fa-edit
-
-    Troubleshooting: /troubleshooting.html || fa fa-life-ring
-
-  Plugins: /plugins/ || fa fa-flask
   archives: /archives/ || fa fa-archive
+  categories: /categories || fa fa-fw fa-th
+  tags: /tags || fa fa-fw fa-tags
+  #nodes: /nodes || fa fa-object-group
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
 
@@ -119,8 +68,8 @@ avatar:
   rounded: true
 
 social:
-  GitHub: https://github.com/next-theme || fab fa-github
-  Crowdin: https://crowdin.com/project/hexo-theme-next || fa fa-globe-asia
+  GitHub: https://github.com/qaqRose/qaqrose.github.io || fab fa-github
+  E-Mail: singleqaq@gmail.com || fa fa-envelope
   RSS: /atom.xml || fa fa-rss
 
 social_icons:
@@ -139,12 +88,12 @@ toc:
 # ============================================================= #
 
 footer:
-  since: 2014
+  since: 2023
   icon:
     name: fa fa-heart
     animated: true
     color: "#808080"
-  copyright: NexT
+  copyright: qaqRose
 
 
 # ============================================================= #
@@ -161,7 +110,7 @@ symbols_count_time:
 
 post_edit:
   enable: true
-  url: https://github.com/next-theme/theme-next-docs/edit/master/source/
+  url: https://github.com/qaqRose/qaqrose.github.io/edit/master/source/
 
 
 # ============================================================= #
@@ -185,8 +134,8 @@ back2top:
 
 github_banner:
   enable: true
-  permalink: https://github.com/next-theme/hexo-theme-next
-  title: Fork NexT on GitHub
+  permalink: https://github.com/qaqRose
+  title: Fork qaqRose on GitHub
 
 font:
   enable: true
@@ -203,7 +152,7 @@ index_with_subtitle: true
 
 exturl: true
 
-google_site_verification: 5AUIVYTbHIAuz-eQtxSfZbWW5eg9_EVZMSQycIuXrG0
+google_site_verification: 5AUIVYTbHIAuz
 
 
 # ============================================================= #
@@ -250,20 +199,57 @@ motion:
 
 comments:
   lazyload: true
+  active: gitalk
+  nav:
+    gitalk:
+      text: 登录 GitHub 评论
+      order: 1
+    valine:
+      text: 不登录进行评论
+      order: 2
 
 disqus:
   enable: true
   shortname: next-theme
   count: true
 
+gitalk:
+  # 是否启用
+  enable: true
+  # Github 用户名
+  github_id: qaqrose
+  # Github 仓库名（需要是公开的仓库）
+  repo: qaqrose.github.io
+  # Github 应用程序客户端 ID
+  client_id: 17232a42f4a51b96dda4
+  # Github 应用程序客户端密钥
+  client_secret: 808fdb4aaa32574cd9c44219533a2cb86de64308
+  # GitHub 仓库所有者和合作者，只有这些人可以初始化 Gitalk
+  admin_user: qaqrose
+  # 类似于 B 站的关灯模式
+  distraction_free_mode: true
+  # 如果你想让每一个参观你网站的人看到统一的语言，你可以在这里设置，
+  # 可选值：en, zh-CN, es-ES, fr, ru, zh-TW
+  language: zh-CN
 
 # ============================================================= #
 # ================= Statistics and Analytics ================== #
 # ============================================================= #
 
 google_analytics:
-  tracking_id: G-43861RVV8R
+  tracking_id: G-CSR3P3LZXL
+# Baidu Analytics ID
+baidu_analytics: c4cb497801033e2b4699fee47e955f0a
 
+# 不蒜子计数
+busuanzi_count:
+  enable: true
+  total_visitors: true
+  total_visitors_icon: fa fa-user
+  total_views: true
+  total_views_icon: fa fa-eye
+  post_views: true
+  post_views_icon: fa fa-eye
 
 # ============================================================= #
 # ====================== Search Services ====================== #
