@@ -204,12 +204,9 @@ comments:
     gitalk:
       text: 登录 GitHub 评论
       order: 1
-    valine:
-      text: 不登录进行评论
-      order: 2
 
 disqus:
-  enable: true
+  enable: false
   shortname: next-theme
   count: true
 
@@ -217,7 +214,7 @@ gitalk:
   # 是否启用
   enable: true
   # Github 用户名
-  github_id: qaqrose
+  github_id: qaqRose
   # Github 仓库名（需要是公开的仓库）
   repo: qaqrose.github.io
   # Github 应用程序客户端 ID
@@ -225,7 +222,7 @@ gitalk:
   # Github 应用程序客户端密钥
   client_secret: 808fdb4aaa32574cd9c44219533a2cb86de64308
   # GitHub 仓库所有者和合作者，只有这些人可以初始化 Gitalk
-  admin_user: qaqrose
+  admin_user: qaqRose
   # 类似于 B 站的关灯模式
   distraction_free_mode: true
   # 如果你想让每一个参观你网站的人看到统一的语言，你可以在这里设置，
