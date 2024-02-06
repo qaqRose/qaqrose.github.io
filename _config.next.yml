@@ -199,11 +199,14 @@ motion:
 
 comments:
   lazyload: true
-  active: gitalk
+  active: giscus
   nav:
-    gitalk:
+    giscus:
       text: 登录 GitHub 评论
       order: 1
+    gitalk:
+      text: 登录 GitHub 评论
+      order: 2
 
 disqus:
   enable: false
@@ -212,7 +215,7 @@ disqus:
 
 gitalk:
   # 是否启用
-  enable: true
+  enable: false
   # Github 用户名
   github_id: qaqRose
   # Github 仓库名（需要是公开的仓库）
@@ -228,6 +231,28 @@ gitalk:
   # 如果你想让每一个参观你网站的人看到统一的语言，你可以在这里设置，
   # 可选值：en, zh-CN, es-ES, fr, ru, zh-TW
   language: zh-CN
+
+giscus:
+  enable: true
+  repo: qaqRose/blog-comments # Github repository name
+  repo_id: R_kgDOJ5cwvQ # Github repository id
+  category: Announcements # Github discussion category
+  category_id: DIC_kwDOJ5cwvc4CXxLV # Github discussion category id
+  # Available values: pathname | url | title | og:title
+  mapping: pathname
+  # Available values: 0 | 1
+  reactions_enabled: 1
+   # Available values: 0 | 1
+  emit_metadata: 1
+  # Available values: light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme
+  theme: light
+  # Available values: en | zh-CN
+  lang: zh-CN
+  # Place the comment box above the comments
+  input_position: bottom
+  # Load the comments lazily
+  loading: lazy
+
 
 # ============================================================= #
 # ================= Statistics and Analytics ================== #
