@@ -1,16 +1,15 @@
 ---
-layout:     post
-title:      "Flyway 快速上手"
-categories: [Flyway, 数据库版本]
-subtitle:   ""
-keywords: 
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
+title: Flyway 快速上手
+layout: info
+commentable: true
+date: 2023-08-24
+mathjax: true
+mermaid: true
+tags: [Flyway]
+categories: Flyway
+description: 
 ---
+
 
 ## 简介
 

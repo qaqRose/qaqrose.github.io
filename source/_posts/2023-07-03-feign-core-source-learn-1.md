@@ -1,16 +1,15 @@
 ---
-layout:     post
-title:      "Feign 源码学习「1」"
-categories: [Java, Feign, 源码]
-subtitle:   "Feign Core 源码初探，主要是了解Feign里面的组件和流程"
-keywords: 
-mermaid: false
-sequence: false
-flow: false
-mathjax: false
-mindmap: false
-mindmap2: false
+title: Feign 源码学习「1」
+layout: info
+commentable: true
+date: 2023-07-03
+mathjax: true
+mermaid: true
+tags: [Flyway]
+categories: Flyway
+description: 
 ---
+
 
 ## 什么是 Feign
 
