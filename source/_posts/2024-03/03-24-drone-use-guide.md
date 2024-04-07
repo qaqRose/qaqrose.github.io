@@ -10,13 +10,6 @@ categories:  docker, drone
 description: 
 ---
 
-# 大纲
-1. ci 简单说明， drone 简答接受
-2. 搭建drone环境（linux ubuntu）
-3. 自动部署 springboot 项目
-4. 自动部署 vue 项目
-5. 总结
-
 
 现代开发项目无论是前端还是后端都离不开 CI （持续构建）工具，不仅可以解放生产，提高生产力，也非常方便管理，同类型的项目只需要编写构建规则，后续都可以复用
 
