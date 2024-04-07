@@ -20,6 +20,10 @@ Install Hexo & NexT & NexT Website Source on Localhost:
 ```bash
 git clone https://github.com/next-theme/theme-next-docs
 cd theme-next-docs
+
+# aliyun source
+npm config set registry https://registry.npmmirror.com
+
 npm install
 ```
 
