@@ -196,6 +196,9 @@ grep -ri "controller"  _posts
 
 ## 搜索"10:32"这一分钟内pool-12-thread-1线程的所有日志，匹配"biz func"并输出后10行的日志
 grep "2024-04-21 10:32.*?pool-12-thread-1" info.log ｜ grep "biz func" -A 10
+
+## 计算info.log文件中出现 xxx的次数，只输出一个数值
+find -c "xxx" info.log
 ```
 
 
@@ -232,7 +235,7 @@ tail -n 10 info.log
 
 监听`info.log`后续添加的内容
 
-```
+```zsh
 ## 一开始打印后10行数内容，然后不断输出新增的内容到控制台
 tail -f -n 10 info.log
 ```
@@ -249,19 +252,19 @@ tail -f -n 10 info.log
 
 表达式
 
-```
+```zsh
 find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]
 ```
 
 一些参数
 
-```
+```zsh
 -name 名称匹配，支持*通配符
 ```
 
 过滤类型
 
-```
+```zsh
 -type 
 	b  缓存块
 	c  字符串
@@ -274,7 +277,7 @@ find [-H] [-L] [-P] [-D debugopts] [-Olevel] [starting-point...] [expression]
 
 大小过滤
 
-```
+```zsh
 -size [cwbkMG]
 b 512字节块
 w 2字节
@@ -289,7 +292,7 @@ G Gb
 
 动作
 
-```
+```zsh
 -fls [file]  将内容输出到文件
 -fprint file   将内容输出到文件
 -ls 		  以`ls -dils`输出到控制台
@@ -299,21 +302,126 @@ G Gb
 
 例如 
 
-```
+```zsh
 ## 搜索 /tmp目录下名字core的普通文件, 并删除
 find /tmp -name core -type f -print | xargs /bin/rm -f
 
 ## 搜索权限位是664的文件
 find . -perm -664
+
+## 模糊匹配，列出当前文件及`.c`后缀的文件
+find . -name "*.c"
+```
+
+
+### 文件操作
+
+#### 文件分割 split
+
+语法
+
+```zsh
+ split [OPTION]... [FILE [PREFIX]]
+```
+
+参数
+
+| 参数                  | 描述                        |
+| --------------------- | --------------------------- |
+| -a, --suffix-length=N | 生成后缀的默认长度，默认为2 |
+| -b, --bytes=SIZE      | 切割每个小文件多少字节      |
+| -d                    | 使用数字后缀，从0开始       |
+| -l, --lines=NUMBER    | 切割每个小文件多少行        |
+| --verbose             | 生成小文件前打印一行输出    |
+
+例子
+
+``` zsh
+## 将 out.log 切割成每个100行的小文件，放在out目录下，前缀是out_ 
+## 后缀是数字
+split -l 100 -d out.log out/out_
 ```
 
 
 
-### 文件操作
+### 终端连接 ssh 
+
+#### 免密登录 ssh-copy-id
+
+通过`ssh-copy-id`验证远程服务器的账号密码，并将本地key复制到服务器的`authorized_keys`来实现免密登录
+
+可以使用`ssh-keygen`来生成key
+
+语法
+
+```
+ssh-copy-id [-f] [-n] [-i [identity_file]] [-p port] [-o ssh_option] [user@]hostname
+```
+
+参数
+
+| 参数             | 描述               |
+| ---------------- | ------------------ |
+| -i identity_file | 指定本地公钥的位置 |
+| -p port          | 指定ssh的端口号    |
+| -o ssh_option    | 使用ssh的参数      |
+
+例如
+
+``` zsh
+## 复制密钥到远程服务器vm1的root账号
+ssh-copy-id root@vm1
+
+## 复制密钥 `id_rsa.pub`(默认就是这个) 到远程服务器vm1的root账号
+ssh-copy-id -i ~/.ssh/id_rsa.pub  root@vm1
+```
+
+然后就可以通过`ssh root@vm1`直接登录
+
+
+
+#### ssh 
+
+登录远程客户端
+
+参数
+
+| 参数             | 描述                                                |
+| ---------------- | --------------------------------------------------- |
+| -b bind_address  | 使用本地地址bing_address连接                        |
+| -E log_file      | 输出debug日志到log_file文件                         |
+| -i identity_file | 指定本地私钥文件identity_file,默认是`~/.ssh/id_rsa` |
+| -p port          | 指定远程服务的端口，默认是22                        |
+| -q               | 安静模式，不输出debug日志和诊断日志                 |
+| -T               | 禁用伪终端分配，一般用与测试连接，不需要执行命令    |
+| -v               | 详细模式，打印调试日志                              |
+
+
+
+
+
+例子
+
+```
+## 测试能否连接github.com，并输出调试日志
+ssh -vT github.com
+
+## 通过10022端口连接到vm1服务器上
+ssh -P '10022' root@vm1
+```
+
+
+
+
 
 
 
 ## 工具篇
 
 
+
+
 ## 软件篇
+
+### docker
+
