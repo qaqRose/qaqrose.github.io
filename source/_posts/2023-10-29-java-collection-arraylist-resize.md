@@ -5,8 +5,8 @@ commentable: true
 date: 2023-10-29
 mathjax: true
 mermaid: true
-tags: [Java,面试]
-categories: Java
+tags: [Java]
+categories: 面试
 description: 
 ---
 
@@ -86,7 +86,7 @@ private void add(E e, Object[] elementData, int s) {
 ```
 
 `modCount` 是列表结构化修改的次数，主要是用于判断并发操作导致数据不一致的情况，这里不展开了
- 
+
 `elementData` 是一个对象数据，真正存储元素的地方，`size` 是当前 list 的大小，相当于包含的元素数量
 
 ```java

@@ -5,8 +5,8 @@ commentable: true
 date: 2023-07-03
 mathjax: true
 mermaid: true
-tags: [feign]
-categories: feign
+tags: [ Feign ]
+categories: 开发
 description: 
 ---
 

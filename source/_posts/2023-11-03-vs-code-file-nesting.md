@@ -5,8 +5,8 @@ commentable: true
 date: 2023-11-03
 mathjax: true
 mermaid: true
-tags: [vscode]
-categories: vscode
+tags: [ Code ]
+categories: 生活
 description: 
 ---
 

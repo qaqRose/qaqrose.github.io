@@ -5,8 +5,8 @@ commentable: true
 date: 2023-07-03
 mathjax: true
 mermaid: true
-tags: [Flyway]
-categories: Flyway
+tags: [Feign]
+categories: 开发
 description: 
 ---
 
@@ -53,7 +53,7 @@ dagger 是一个快速的依赖注入 Java 和 Android 框架
 
 ```shell
 git clone git@github.com:OpenFeign/feign.git
-```  
+```
 
 项目当前版本是 `12.4-SNAPSHOT`
 可以看到有很多模块，且项目代码量已经来到 5w+ 了  

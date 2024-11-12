@@ -5,8 +5,8 @@ commentable: true
 date: 2023-09-25
 mathjax: true
 mermaid: true
-tags: [macOS]
-categories: macOS
+tags: [ MacOS ]
+categories: 生活
 description: 
 ---
 
@@ -22,14 +22,14 @@ description:
 
 使用软件列表
 
-|  软件   | 描述  | 链接 | 
-|  ----  | ----  |  ---- | 
-| iTerm2  | 非常好用macOS终端 | [官网](https://iterm2.com/) | 
+|  软件   | 描述  | 链接 |
+|  ----  | ----  |  ---- |
+| iTerm2  | 非常好用macOS终端 | [官网](https://iterm2.com/) |
 | uTools  | 效率工具平台，丰富的插件 | [官网](https://www.u.tools/) |
 | Snipaste | 截图工具，截图+贴图 | [官网](https://www.snipaste.com/) |
 | Tencent Lemon | 腾讯柠檬清理  | [官网](https://lemon.qq.com/) |
 | Magnet   |  窗口分屏软件 | [官网](https://magnet.crowdcafe.com/) |
-| ClashX   |  代理软件 | [Github地址](https://github.com/yichengchen/clashX) | 
+| ClashX   |  代理软件 | [Github地址](https://github.com/yichengchen/clashX) |
 
 ### iTerm2
 
@@ -85,18 +85,18 @@ source ~/.zshrc
 
 一些好用的命令
 
-| Alias   | Command  | 
+| Alias   | Command  |
 | ---- |   -----  |
 |  glods  | git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --date=short  |
 | grba | git rebase --abort |
 |  grhh | git reset --hard |
 | gts | git tag -s |
-| gl  | git pull | 
-| gfa | git fetch --all --prune | 
+| gl  | git pull |
+| gfa | git fetch --all --prune |
 | gdca | git diff --cached |
-| gcb  | git checkout -b | 
-| gstp | git stash pop | 
-| gstaa | git stash apply | 
+| gcb  | git checkout -b |
+| gstp | git stash pop |
+| gstaa | git stash apply |
 
 #### zsh-autosuggestions
 [下载安装说明](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#antigen)

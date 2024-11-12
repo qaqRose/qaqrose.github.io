@@ -6,7 +6,7 @@ date: 2024-03-24
 mathjax: true
 mermaid: true
 tags: [ CI ]
-categories:  docker, drone
+categories:  运维
 description: 
 ---
 

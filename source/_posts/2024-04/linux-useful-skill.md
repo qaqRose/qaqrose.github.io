@@ -6,7 +6,7 @@ date: 2024-04-21
 mathjax: true
 mermaid: true
 tags: [ Linux ]
-categories:  Linux
+categories:  运维
 description: 
 ---
 
@@ -408,6 +408,9 @@ ssh -vT github.com
 
 ## 通过10022端口连接到vm1服务器上
 ssh -P '10022' root@vm1
+
+## 远程执行 `df -h` 命令
+ssh root@vm1 "df -h"
 ```
 
 

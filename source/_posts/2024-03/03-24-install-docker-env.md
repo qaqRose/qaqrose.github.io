@@ -5,8 +5,8 @@ commentable: true
 date: 2024-03-24
 mathjax: true
 mermaid: true
-tags: [ docker ]
-categories:  docker
+tags: [ Docker ]
+categories:  运维
 description: 
 ---
 

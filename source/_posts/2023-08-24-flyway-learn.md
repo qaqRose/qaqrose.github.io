@@ -6,7 +6,7 @@ date: 2023-08-24
 mathjax: true
 mermaid: true
 tags: [Flyway]
-categories: Flyway
+categories: 开发
 description: 
 ---
 
@@ -140,10 +140,10 @@ CREATE TABLE `user`  (
 | install_rank  | 主键，递增 |
 | version  | 数据库版本 |
 | description  | 描述 |
-| type | 操作类型 | 
-| script | 脚本文件名称 | 
+| type | 操作类型 |
+| script | 脚本文件名称 |
 | checksum | 校验哈希 |
-| installed_by | 执行用户 | 
+| installed_by | 执行用户 |
 | installed_on | 执行日期 |
 | execution_time | 执行耗时 |
 | success | 是否已执行 |

@@ -5,7 +5,7 @@ commentable: true
 date: 2024-05-03
 mathjax: true
 mermaid: true
-tags: [ K8S ]
+tags: [ K8s ]
 categories: 运维
 description: 
 ---
