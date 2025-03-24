@@ -13,7 +13,12 @@ git status
 
 git add .
 
-git commit -m "commit"
+if [ -n "$1" ]; then
+    git commit -m "$1"
+else
+    git commit -m "commit"
+fi
+
 
 git fetch --all
 
