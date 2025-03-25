@@ -40,7 +40,7 @@ del miniconda.exe
 
 输入`conda list`  测试安装环境是否成功
 
-![image-20240508184630590](\images\python-quick-start\image-20240508184630590.png)
+![image-20240508184630590](images/python-quick-start\image-20240508184630590.png)
 
 ## 更新镜像源（可选）
 
@@ -59,14 +59,14 @@ conda config  --show
 
 
 
-![image-20240509183446397](\images\python-quick-start\image-20240509183446397.png)
+![image-20240509183446397](images/python-quick-start/image-20240509183446397.png)
 
 
 
 ## 切换环境
 默认的初始环境是`base`
 
-![image-20240509181808047](\images\python-quick-start\image-20240509181808047.png)
+![image-20240509181808047](images/python-quick-start/image-20240509181808047.png)
 
 ### 创建环境
 我们通过如下命令来创建一个环境
@@ -77,11 +77,11 @@ conda create --name env1 python=3.10
 创建的时候会创建一个环境目录（在安装目录的`env`文件夹下）
 并下载一些依赖，例如`pip`, `zlib` 等
 
-![image-20240509182306044](\images\python-quick-start\image-20240509182306044.png)
+![image-20240509182306044](images/python-quick-start/image-20240509182306044.png)
 
 下载的依赖
 
-![image-20240509182515021](\images\python-quick-start\image-20240509182515021.png)
+![image-20240509182515021](images/python-quick-start/image-20240509182515021.png)
 
 ### 切换环境
 
@@ -93,7 +93,7 @@ conda activate env1
 
 
 
-![image-20240509182729365](\images\python-quick-start\image-20240509182729365.png)
+![image-20240509182729365](images/python-quick-start/image-20240509182729365.png)
 
 
 
@@ -126,7 +126,7 @@ conda search [-h] [--envs] [-i] [--subdir SUBDIR] [--skip-flexible-search] [-c C
 ```zsh
 conda search numpy
 
-![image-20240508190855795](\images\python-quick-start\image-20240508190855795.png)
+![image-20240508190855795](images/python-quick-start/image-20240508190855795.png)
 
 ```
 查询某个版本范围
@@ -144,7 +144,7 @@ conda search "*mysql*"
 conda search pandas[build=py39h5da7b33_0]  -i
 ```
 
-![image-20240508192428631](\images\python-quick-start\image-20240508192428631.png)
+![image-20240508192428631](images/python-quick-start/image-20240508192428631.png)
 
 ### 安装依赖
 
@@ -173,7 +173,7 @@ conda list
 ```
 可以查看环境的依赖包有哪些
 
-![image-20240510115549385](\images\python-quick-start\image-20240510115549385.png)
+![image-20240510115549385](images/python-quick-start/image-20240510115549385.png)
 
 
 
@@ -183,7 +183,7 @@ conda list
 
 我们已经可以编写python代码啦
 
-![image-20240510170958572](\images\python-quick-start\image-20240510170958572.png)
+![image-20240510170958572](images/python-quick-start/image-20240510170958572.png)
 
 工欲善其事，必先利其器
 
@@ -193,20 +193,20 @@ conda list
 
 使用免费的社区版就足矣了
 
-![image-20240521110030043](\images\python-quick-start\image-20240521110030043.png)
+![image-20240521110030043](images/python-quick-start/image-20240521110030043.png)
 
 ### 配置环境
 为了使不同项目的依赖不冲突，我们可以新建一个项目，并创建一个conda环境
 
 进入到配置页面
 
-![image-20241105164423729](\images\python-quick-start\image-20241105164423729.png)
+![image-20241105164423729](images/python-quick-start/image-20241105164423729.png)
 
 依次点击  Project -> Python Interpreter  -> Add Interpreter -> Add Local Interpreter
 
 然后新增一个conda环境，如下
 
-![image-20241106095300670](\images\python-quick-start\image-20241106095300670.png)
+![image-20241106095300670](images/python-quick-start/image-20241106095300670.png)
 
 
 
@@ -224,7 +224,7 @@ conda list
 pip install Flash
 ```
 
-![image-20241105174900874](\images\python-quick-start\image-20241105174900874.png)
+![image-20241105174900874](images/python-quick-start/image-20241105174900874.png)
 
 安装完成
 
@@ -248,11 +248,11 @@ def hello_world():
 flask --app hello run
 ```
 
-![image-20241105175206188](\images\python-quick-start\image-20241105175206188.png)
+![image-20241105175206188](images/python-quick-start/image-20241105175206188.png)
 
 访问[127.0.0.1:5000](http://127.0.0.1:5000/)
 
-![image-20241105175226110](\images\python-quick-start\image-20241105175226110.png)
+![image-20241105175226110](images/python-quick-start/image-20241105175226110.png)
 
 运行成功
 
@@ -262,7 +262,7 @@ flask --app hello run
 
 创建一个新的项目 `spider-demo`
 
-![image-20241105180324772](\images\python-quick-start\image-20241105180324772.png)
+![image-20241105180324772](images/python-quick-start/image-20241105180324772.png)
 
 安装依赖
 
@@ -292,7 +292,7 @@ for item in contentList:
 
 运行如下
 
-![image-20241105183428741](\images\python-quick-start\image-20241105183428741.png)
+![image-20241105183428741](images/python-quick-start/image-20241105183428741.png)
 
 
 

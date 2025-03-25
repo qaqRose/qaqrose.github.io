@@ -22,11 +22,11 @@ description:
 
 可以在导航栏看到
 
- ![image-20241112180256621](images\bacnet-quick-start\image-20241112180256621.png)
+ ![image-20241112180256621](images/bacnet-quick-start/image-20241112180256621.png)
 
 其中 BACnet.Room.Simulator 是BACnet设备仿真，可以让模拟现实中一个室内控制设备
 
-![image-20241113110632048](images\bacnet-quick-start\image-20241113110632048.png)
+![image-20241113110632048](images/bacnet-quick-start/image-20241113110632048.png)
 
 打开软件，可以看到是一个温度控制传感器
 
@@ -44,11 +44,11 @@ description:
 
 右键点击Devices，然后选中 Add device
 
-![image-20241113141007686](images\bacnet-quick-start\image-20241113141007686.png)
+![image-20241113141007686](images/bacnet-quick-start/image-20241113141007686.png)
 
 查看BACnet的一些链接参数
 
-![image-20241113141130708](images\bacnet-quick-start\image-20241113141130708.png)
+![image-20241113141130708](images/bacnet-quick-start/image-20241113141130708.png)
 
 我们通过BACnet/IP V4方式连接
 
@@ -58,7 +58,7 @@ description:
 
 我们可以启动多个仿真，对应不同房间的设备
 
-![image-20241113142322713](images\bacnet-quick-start\image-20241113142322713.png)
+![image-20241113142322713](images/bacnet-quick-start/image-20241113142322713.png)
 
 每个BACnet设备都有一个设备id
 
@@ -66,7 +66,7 @@ description:
 
 每个BACnet设备有一些寄存器地址（Address Space）,用于存储不同的点位
 
-![image-20241113143333547](images\bacnet-quick-start\image-20241113143333547.png)
+![image-20241113143333547](images/bacnet-quick-start/image-20241113143333547.png)
 
 ### BACnet基础对象类型
 
@@ -92,15 +92,15 @@ AI、AO、AV、BI、BO、BV、MI、MO、MV
 
 室内温度
 
-![image-20241113152302784](images\bacnet-quick-start\image-20241113152302784.png)
+![image-20241113152302784](images/bacnet-quick-start/image-20241113152302784.png)
 
 水温
 
-![image-20241113152311636](images\bacnet-quick-start\image-20241113152311636.png)
+![image-20241113152311636](images/bacnet-quick-start/image-20241113152311636.png)
 
 室外温度
 
-![image-20241113152343365](images\bacnet-quick-start\image-20241113152343365.png)
+![image-20241113152343365](images/bacnet-quick-start/image-20241113152343365.png)
 
 可以看到AI类型有以上这些字段
 
@@ -123,13 +123,13 @@ AV1 AV2 AV3 分别对应仿真的三个温度模式（Comfort/Eco+/Vacancv）的
 
 例如修改 `SetPoint 1`的值为31.1 ，可以看到终端上的温度也变成31.1
 
-![image-20250321103332794](images\bacnet-quick-start\image-20250321103332794.png)
+![image-20250321103332794](images/bacnet-quick-start/image-20250321103332794.png)
 
 
 
 我们还可以将BACnet Object 拖拽到监听点位，在下方就可以数值变化的曲线，方便我们观察指标的变化
 
-![image-20250321103015129](images\bacnet-quick-start\image-20250321103015129.png)
+![image-20250321103015129](images/bacnet-quick-start/image-20250321103015129.png)
 
 
 
@@ -139,11 +139,11 @@ AV1 AV2 AV3 分别对应仿真的三个温度模式（Comfort/Eco+/Vacancv）的
 
 在网关配置了BACnet IP 转发
 
-![image-20250321133954142](images\bacnet-quick-start\image-20250321133954142.png)
+![image-20250321133954142](images/bacnet-quick-start/image-20250321133954142.png)
 
 点位如下
 
-![image-20250321133925301](images\bacnet-quick-start\image-20250321133925301.png)
+![image-20250321133925301](images/bacnet-quick-start/image-20250321133925301.png)
 
 我们使用Java代码来读写点位
 
@@ -274,7 +274,7 @@ System.out.println("read " + read);
 
 设置之后
 
-![image-20250324113229771](images\bacnet-quick-start\image-20250324113229771.png)
+![image-20250324113229771](images/bacnet-quick-start/image-20250324113229771.png)
 
 可以看到点位值变成3
 
@@ -284,7 +284,7 @@ System.out.println("read " + read);
 
 代码原理如下图
 
-![image-20250324165444792](images\bacnet-quick-start\image-20250324165444792.png)
+![image-20250324165444792](images/bacnet-quick-start/image-20250324165444792.png)
 
 在启动客户端 `client.start()` 之后，底层还先后执行transport和network两个实体的初始化方法 `initialize` ，并启动各自的内置线程
 
