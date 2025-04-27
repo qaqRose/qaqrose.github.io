@@ -36,6 +36,7 @@ external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
+  target: _blank
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
